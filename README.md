@@ -10,6 +10,7 @@ Displays statistical activity of 4chan boards. The data is gathered from the [se
 for data.
 * Vanilla CSS3 is used for styling the website (mainly grids and flexboxes)
 * [Open-color](https://github.com/yeun/open-color) - for the color scheme
+* [Webpack](https://webpack.js.org) - bundling the website together
 
 ## Build Setup
 
