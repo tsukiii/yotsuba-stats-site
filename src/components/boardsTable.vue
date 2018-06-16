@@ -8,12 +8,13 @@
         {name: 'activityRate', header: 'Activity Rate',
           tooltip: 'Activity compared to the top PPM rate'},
         ]" :key="item.name" :class="[sortBy === item.name ?
-          'category-selected' : '']" :hover-text="item.tooltip" @click="sortTableBy(item.name)">
+          'category-selected' : '']" :hover-text="item.tooltip"
+          class="tooltip-category" @click="sortTableBy(item.name)">
         {{item.header}}</div>
     </div>
     <transition-group>
       <div v-for="board in sortedTable" :key="board" class="table-rows">
-        <div>/{{board}}/</div>
+        <div :hover-text="boardNames[`${board}`]" class="tooltip-right">/{{board}}/</div>
         <div>{{ history[history.length - 1][`${board}`].toFixed(2) }}</div>
         <div>{{ activityRate[board] }}%</div>
       </div>
@@ -150,20 +151,20 @@ export default {
   line-height: 2;
   z-index: 999;
   position: absolute;
-  content: attr(data-hover-text);
-  white-space: nowrap;
+  content: attr(hover-text);
+  white-space:pre-line;
   padding: 0 1em;
-  white-space: nowrap;
+  font-size: 0.75rem;
   background-color: rgba(0,0,0,0.85);
   color: #ffffff;
 }
 
-[hover-text].tooltip-bottom:hover::after{
+[hover-text].tooltip-category:hover::after{
   left: 0px;
   top: 125%;
 }
 
-[hover-text].tooltip-right:hover::after{
+[hover-text].tooltip-board:hover::after{
     left: 100%;
 }
 </style>

@@ -102,7 +102,8 @@ export default {
   background-color: $--color-navbar;
   line-height: 2em;
   >.header-text{
-    color: #ffffff;
+    color: $--color-navbar-text;
+    font-weight: bold;
   }
 }
 

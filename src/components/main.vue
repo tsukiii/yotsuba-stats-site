@@ -35,7 +35,7 @@ export default {
     position: relative;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "info . . "
+    grid-template-areas: ". info . "
                          "chart chart boardsTable"
                          ". . boardsTable";
     grid-row-gap: 1em;
