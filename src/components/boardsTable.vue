@@ -141,7 +141,7 @@ export default {
     background-color: $--color-table-second-row;
   }
   &:hover{
-    background-color: #000000;
+    background-color: $--color-table-hover;
     color: #ffffff;
   }
 }

@@ -124,14 +124,14 @@ export default {
   >.board-button {
     border: 1px solid;
     justify-content: center;
-    color: #000000;
+    background-color: $--color-button;
     width: 4rem;
     margin: 0.1rem 0.5rem 0.1rem 0.5rem;
     transition: all 0.5s ease-out;
     &.button-selected {
       font-weight: bold;
       color: #ffffff;
-      background-color: #74b816;
+      background-color: $--color-button-selected;
       border: none;
     }
   }

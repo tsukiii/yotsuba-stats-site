@@ -35,7 +35,7 @@ export default {
     position: relative;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: ". info . "
+    grid-template-areas: "info . . "
                          "chart chart boardsTable"
                          ". . boardsTable";
     grid-row-gap: 1em;
@@ -51,14 +51,17 @@ export default {
   .info-container {
     grid-area: info;
     box-shadow: $--box-shadow-values;
+    background-color: $--color-box-background-color;
   }
   .chart-container {
     grid-area: chart;
     box-shadow: $--box-shadow-values;
+    background-color: $--color-box-background-color;
   }
   .table-container {
     grid-area: boardsTable;
     box-shadow: $--box-shadow-values;
+    background-color: $--color-box-background-color;
   }
   .footer-container {
     grid-area: footer;

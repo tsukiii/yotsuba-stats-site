@@ -25,7 +25,7 @@ export default {
   background-color: $--color-navbar;
   z-index: 99;
   height: 3rem;
-  margin: 0;
+  padding: 0.25em 1em 0.25em 1em;
 }
 .navbar-container {
   display: flex;
@@ -33,13 +33,20 @@ export default {
   height: 100%;
   width: 100%;
   color: $--color-navbar-text;
-}
 
-.navbar-link,
-.spacer {
-  font-size: 1.5rem;
-  color: #ffffff;
-  position: relative;
+}
+a{
+  >.navbar-link{
+    font-size: 1.5rem;
+    position: relative;
+    color: #ffffff;
+    >&.title{
+      padding: 0 1em 0 0;
+    }
+    >&.about{
+      padding: 0 0 0 1em;
+    }
+  }
 }
 
 </style>
